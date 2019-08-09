@@ -8,4 +8,5 @@ class Survey(models.Model):
     host = models.CharField(max_length=100, blank=True)
     question = models.TextField(blank=True)
     is_complete = models.BooleanField(default=False)
+    photo_main = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     contact_date = models.DateTimeField(default=datetime.now, blank=True)
